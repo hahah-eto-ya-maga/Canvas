@@ -1,0 +1,38 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <div class="preview">
+        <div class="inner__preview">
+            <div class="left__preview">Ну шо</div>
+            <div class="right__preview">лес го</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="funcNav show">
+                <div class="funcInputs"></div>
+                <div>
+                    <button class="addFunction">Add</button>
+                    <button class="makeScreenshot">Screenshot</button>
+                </div>
+            </div>
+            <button class="showFunctionsMenu show">
+                <span class="mdi mdi-arrow-up-thick"></span>
+            </button>
+        </div>
+        <canvas id="graph"></canvas>
+    </div>
+
+    <script src="js/Graph2d.js"></script>
+    <script src="js/Canvas.js"></script>
+    <script src="js/UI/UI.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

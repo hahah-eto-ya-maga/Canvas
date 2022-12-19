@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    font-family: Calibri;
+    font-weight: 600;
+}
+
+body {
+    background: #222222;
+    overflow: hidden;
+}
+
+input {
+    margin: 5px 0 0 5px;
+
+    background: transparent;
+    backdrop-filter: blur(1px);
+    color: #222222;
+
+    border: 2px black groove;
+    border-radius: 7px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input[type="color"] {
+    cursor: pointer;
+}
+
+span {
+    color: #222222;
+}
+
+button {
+    font-size: 20px;
+    background: transparent;
+    backdrop-filter: blur(1px);
+    border-radius: 7px;
+    border: 2px solid black;
+
+    cursor: pointer;
+}
+
+canvas:hover {
+    cursor: grab;
+}
+canvas:active {
+    cursor: grabbing;
+}
+
+/*          funcs          */
+
+.container {
+    position: absolute;
+}
+
+.deleteFunc {
+    margin-left: 5px;
+}
+
+.addFunction, .showFunctionsMenu {
+    margin: 5px 0 0 5px;
+}
+
+.hide {
+    animation-duration: .8s;
+    animation-fill-mode: both;
+    animation-name: hideNav;
+}
+
+.show {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-name: showNav;
+}
+
+@keyframes showNav {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(1px);
+    }
+}
+@keyframes hideNav {
+    0% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(-500px);
+    }
+}
+
+
+
+
+
+/*          preview         */
+
+.preview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -100;
+
+    background: white;
+}
+
+.inner__preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30vh;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.left__preview, .right__preview {
+    color: black;
+    font-family: Arial;
+    font-size: 100px;
+}
+
+.left__preview {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.right__preview {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.hide_preview_left {
+    animation-duration: 4s;
+}
+
+.hide_preview_right {
+
+}
+
+@keyframes hide_preview_left_anim {
+    100% {
+        transform: translateX(-500px);
+    }
+}
+
+@keyframes hide_preview_right_anim {
+    100% {
+        transform: translateX(500px);
+    }
+}
